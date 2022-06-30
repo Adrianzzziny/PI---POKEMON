@@ -1,8 +1,8 @@
 const {Sequelize, Op} = require ('sequelize');
 const axios = require ('axios');
-const { Pokemon , Type} = require ('../db.js');
+const { Pokemon , Type} = require ('../db');
 
-
+//ACUERDATE DE PROBAR CAMBIAR AQUI DE AWAIT A PROMISE//
 //=================================================POKEMONS By Api===================================================
 
 const getApiInfo = async () => {
@@ -21,7 +21,7 @@ const getApiInfo = async () => {
                 hp: p.stats[0].base_stat,
                 attack: p.stats[1].base_stat,
                 defense: p.stats[2].base_stat,
-                speed: p.stats[5].base_stat,
+                defense: p.stats[5].base_stat,
                 height: p.height,
                 weight: p.weight,
                 types: p.types.map(t=> t.type)
@@ -85,7 +85,7 @@ const showAllPokemon = async (name) => {
           hp: p.stats[0].base_stat,
           attack: p.stats[1].base_stat,
           defense: p.stats[2].base_stat,
-          speed: p.stats[5].base_stat,
+          defense: p.stats[5].base_stat,
           height: p.height,
           weight: p.weight,
           types: p.types.map((t) => t.type),
@@ -113,17 +113,17 @@ const getPokeByName = async (req, res) => {
         const pokeDb = pokemonDb.filter(
           (e) => e.name.toLowerCase() === name.toLowerCase()
         );
-//Para que solo  me traiga un pokemon creado por mi que ya existe en la api, debo comentar renglo 116-117-118, sacar el else y dejar solo el if/**/
-/*esta*/            if (pokeDb.length > 0 && pokeByApi.length > 0) {
-/*esta*/            const allPoke = pokeDb.concat(pokeByApi);
-/*esta*/            return res.send(allPoke);
-/*quitar else*/        } else if (pokeDb.length > 0) {
-                            return res.status(200).send(pokeDb);
-                            } else if (pokeByApi.length > 0) {
-                                return res.status(200).send(pokeByApi);
-                            } else {
-                                return res.status(404).send({ msg: "Pokemon Not Found", status: false });
-                            }
+//   Para que solo  me traiga un pokemon creado por mi que ya existe en la api, debo comentar renglo 115-116-117, sacar el else y dejar solo el if
+        // if (pokeDb.length > 0 && pokeByApi.length > 0) {
+        //   const allPoke = pokeDb.concat(pokeByApi);
+        //   return res.send(allPoke);
+         if (pokeDb.length > 0) {
+          return res.status(200).send(pokeDb);
+        } else if (pokeByApi.length > 0) {
+          return res.status(200).send(pokeByApi);
+        } else {
+          return res.status(404).send({ msg: "Pokemon Not Found", status: false });
+        }
       } 
       else {
         const allPoke = await getMixInfo();
@@ -253,3 +253,8 @@ module.exports = {
     getAllTypes, 
     addNewPokemon   
 }
+
+
+
+
+

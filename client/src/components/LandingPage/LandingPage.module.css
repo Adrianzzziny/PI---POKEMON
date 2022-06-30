@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+.background{
+   
+    background-image: url('../Assets/landingpokemon.jpg');   
+    max-width: 100%;    
+    background-size:cover;
+    padding: 375px;      
+    position: relative; 
+    opacity: 85%;  
+  
+} 
+
+.btn{
+    background: white;
+    position: relative;
+    display: inline-block;    
+    border: solid 3px black;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-family:monospace;
+    font-style: oblique;
+    font-size:larger;
+    font-weight:bold;
+    color:red;
+    letter-spacing: 4px;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.2s; 
+}
+.btn:hover{
+    background: red;
+    color: white;
+    transition-delay: 0.1s;
+} 

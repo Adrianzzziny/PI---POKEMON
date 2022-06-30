@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+}
+
+.background{
+    background-color: rgba(128, 120, 120, 0.575);
+}
+.contentPadre{    
+        background: rgba(255, 255, 255, 0.575);
+        box-shadow: 0 0 10px rgb(255, 255, 255);      
+        height: 100%;
+        max-width: 100%;
+        /* overflow: auto;         */
+}
+.div3{
+    background-color: #13132b;    
+    display: flex ;
+    justify-content: center;
+    position: relative;
+    flex-direction:row;
+    align-items:center;
+    place-content: space-around;
+    padding: 2% 0% 2% 0%;    
+}
+
+/* .backToLanding{
+    background-color: crimson;
+} */
+
+.btnBack1{   
+        background-color: #ffffff;
+        border-radius: 20px;
+        border-color: rgb(255, 255, 255);
+        font-family: monospace;
+        font-weight: bolder;       
+        padding: 17px 15px 17px 15px;
+        position: relative;
+        margin-left: -680px; 
+        margin-top: 10px; 
+}
+
+.btnBack1:hover{
+    background-color:rgb(255, 238, 0);
+    transition-delay: 0.2s;
+    transition: 0.5s;
+    font-family: monospace;
+    color: #2b4162;
+    cursor: pointer;
+}
+.div4{
+    background-color: transparent;
+}
+
+.btnCreate{
+        background-color: #45e05f;
+        border-radius: 20px;
+        border: 3px solid white;
+        font-family: monospace;
+        font-weight: bolder;       
+        padding: 25px 15px 25px 15px;
+        position: relative;
+        margin-right: -220px;
+}
+.btnCreate:hover{   
+    background-color:white;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    font-family: monospace;
+    color: #090081;
+    cursor: pointer;
+}
+
+
+.btnReload{
+    display: inline;
+    background-color: #13132b;
+    color: white;
+    border-width: 0.5px;
+    padding: 15px 10px 15px 10px;
+    border: none;
+    height: 25px;
+    font-family: monospace;
+    font-size: medium;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border: 1px solid #2B3951;
+  }
+
+.btnReload:hover{   
+    background-color:rgba(255, 255, 255, 0.575);
+    transition-delay: 0.2s;
+    transition: 0.5s;
+    font-family: monospace;
+    font-size: bold;
+    color: #2b4162;
+    cursor: pointer;
+}
+.filters{
+    /* background-color:#385f71; */
+    display: flex;
+    flex-wrap:wrap;
+    overflow: hidden;
+    background-color: #706e6a;
+    border: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    height:10%;
+    padding: 25px 10px 25px 10px;
+    margin-top: 0rem;
+    /* border-top-right-radius: 1rem;
+    border-bottom-right-radius: 8rem;
+    border-bottom-left-radius: 8rem; */
+    justify-content:center;
+    align-items: center;
+   
+}
+.labels{
+    font-family: monospace;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 0.3rem;
+    margin-left: 0.1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.options{
+    font-family: monospace;
+    background-color: #ffffff;
+    font-size: 15px;
+    margin-left: 10px;
+
+}
+.topPagination{
+    background-color: black;
+}
+.containerPokemon{
+    background-color: rgba(255, 255, 255, 0.575);
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* .lowerPagination{
+    background-color: aqua;
+} */
+.card{
+    text-decoration: none;
+}
